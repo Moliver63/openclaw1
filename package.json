@@ -1,0 +1,33 @@
+{
+  "name": "openclaw-work",
+  "version": "1.0.0",
+  "description": "Cliente desktop do OpenClaw Gateway",
+  "main": "main.js",
+  "author": "Lab Quântico de Software",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.labquantico.openclawwork",
+    "productName": "OpenClaw Work",
+    "files": [
+      "main.js",
+      "preload.js",
+      "renderer/**/*"
+    ],
+    "win": {
+      "target": "portable"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "allowScripts": {
+    "electron@33.4.11": true
+  }
+}
